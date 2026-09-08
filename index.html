@@ -1,1 +1,416 @@
 <img src="profile.jpg" alt="Profile Picture" width="200px">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafi Talukder - CV</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .resume-container {
+            width: 800px;
+            background: #fff;
+            display: flex;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        /* Sidebar (Left Side) */
+        .sidebar {
+            width: 35%;
+            background-color: #03254c;
+            color: #ffffff;
+            padding: 30px 20px;
+        }
+
+        .profile-img-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #38b6ff;
+            object-fit: cover;
+        }
+
+        .name-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .name-title h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .name-title p {
+            font-size: 11px;
+            color: #d1d1d1;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+
+        .section-badge {
+            background-color: #1167b1;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .contact-info p, .info-list p {
+            font-size: 11px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            color: #e0e0e0;
+        }
+
+        .contact-info strong {
+            color: #fff;
+            display: block;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            font-size: 11px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #e0e0e0;
+        }
+
+        .sidebar-list li i {
+            color: #38b6ff;
+            font-size: 10px;
+        }
+
+        /* Main Content (Right Side) */
+        .main-content {
+            width: 65%;
+            padding: 30px 25px;
+            color: #333;
+        }
+
+        .main-section {
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-header i {
+            background-color: #03254c;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .section-header h2 {
+            font-size: 15px;
+            color: #03254c;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            width: 100%;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-left: 10px;
+            width: 60%;
+            height: 1px;
+            background-color: #03254c;
+        }
+
+        .main-content p {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .flex-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex-col {
+            flex: 1;
+        }
+
+        .main-list {
+            list-style: none;
+        }
+
+        .main-list li {
+            font-size: 11px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #444;
+        }
+
+        .main-list li i {
+            color: #03254c;
+            font-size: 10px;
+        }
+
+        .edu-table {
+            font-size: 11px;
+            width: 100%;
+        }
+
+        .edu-table td {
+            padding: 2px 0;
+        }
+
+        .tag-line {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 20px;
+            color: #1167b1;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .signature-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 25px;
+            font-size: 11px;
+        }
+
+        .sig-text {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+            <div class="profile-img-box">
+                <!-- ছবির নাম মিলিয়ে দেখুন -->
+                <img src="profile.jpg" alt="Rafi Talukder" class="profile-img">
+            </div>
+
+            <div class="name-title">
+                <h1>RAFI TALUKDER</h1>
+                <p>Videography & Video Editor &<br>AI Content Creator</p>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="sidebar-section">
+                <div class="section-badge"><i class="fa-solid fa-phone"></i> Contact</div>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> +880 1751096324 whatsapp /<br> 01603-326419</p>
+                    <p><strong>Email:</strong> arifinrafi888@gmail.com</p>
+                    <p><strong>Location:</strong> Bhunbir, Sreemangal, Bangladesh</p>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="sidebar-section">
+                <div class="section-badge"><i class="fa-solid fa-gear"></i> Skills</div>
+                <ul class="sidebar-list">
+                    <li><i class="fa-solid fa-check"></i> Video Editing</li>
+                    <li><i class="fa-solid fa-check"></i> Videography</li>
+                    <li><i class="fa-solid fa-check"></i> AI Video Editing</li>
+                    <li><i class="fa-solid fa-check"></i> AI Content Creation</li>
+                    <li><i class="fa-solid fa-check"></i> Cinematic Video Editing</li>
+                    <li><i class="fa-solid fa-check"></i> Facebook Reels & Short-form Videos</li>
+                    <li><i class="fa-solid fa-check"></i> YouTube Content Editing</li>
+                    <li><i class="fa-solid fa-check"></i> Basic Photo Editing</li>
+                    <li><i class="fa-solid fa-check"></i> Creative Content Design</li>
+                    <li><i class="fa-solid fa-check"></i> Youtube thumbnail edit</li>
+                </ul>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="sidebar-section">
+                <div class="section-badge"><i class="fa-solid fa-globe"></i> Languages</div>
+                <ul class="sidebar-list">
+                    <li><i class="fa-solid fa-check"></i> Bangla: Native</li>
+                    <li><i class="fa-solid fa-check"></i> English: Proficient</li>
+                </ul>
+            </div>
+
+            <!-- PERSONAL INFO -->
+            <div class="sidebar-section">
+                <div class="section-badge"><i class="fa-solid fa-user"></i> Personal Info</div>
+                <div class="info-list">
+                    <p><i class="fa-solid fa-star"></i> <strong>Nationality:</strong> Bangladeshi</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> <strong>Date of Birth:</strong> 18 February</p>
+                    <p><i class="fa-solid fa-moon"></i> <strong>Religion:</strong> Islam</p>
+                    <p><i class="fa-solid fa-heart"></i> <strong>Marital Status:</strong> Unmarried</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <div class="main-content">
+            
+            <!-- PROFILE -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Profile</h2>
+                </div>
+                <p>I am a passionate and creative freelance video editor and content creator from Bangladesh. I specialize in videography, video editing, cinematic content, and AI-powered creative work. I aim to deliver clean, engaging, and professional content based on each client's needs.</p>
+            </div>
+
+            <!-- EDUCATION & COMPUTER SERVICE -->
+            <div class="main-section flex-row">
+                <div class="flex-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h2>Education</h2>
+                    </div>
+                    <p><strong>Secondary School Certificate (SSC)</strong></p>
+                    <table class="edu-table">
+                        <tr><td>Status</td><td>: Passed</td></tr>
+                        <tr><td>Institute</td><td>: Bhunabir Dasarath High school</td></tr>
+                        <tr><td>Year of Passing</td><td>: #</td></tr>
+                    </table>
+                </div>
+
+                <div class="flex-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h2>Computer Service</h2>
+                    </div>
+                    <ul class="main-list">
+                        <li><i class="fa-solid fa-circle-small"></i> Microsoft office word</li>
+                        <li><i class="fa-solid fa-circle-small"></i> Microsoft office xcel</li>
+                        <li><i class="fa-solid fa-circle-small"></i> Microsoft office Access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SERVICES I OFFER -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h2>Services I Offer</h2>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <ul class="main-list">
+                            <li><i class="fa-solid fa-circle"></i> Professional video editing for social media</li>
+                            <li><i class="fa-solid fa-circle"></i> Facebook Reels and short videos</li>
+                            <li><i class="fa-solid fa-circle"></i> YouTube video editing</li>
+                            <li><i class="fa-solid fa-circle"></i> Cinematic video editing</li>
+                            <li><i class="fa-solid fa-circle"></i> AI-assisted video creation</li>
+                            <li><i class="fa-solid fa-circle"></i> Event and promotional video editing</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col" style="text-align: center;">
+                        <p class="tag-line">Turn Ideas Into Video</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PERSONAL STRENGTH -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-star"></i>
+                    <h2>Personal Strength</h2>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-col">
+                        <ul class="main-list">
+                            <li><i class="fa-solid fa-check"></i> Creative and dedicated</li>
+                            <li><i class="fa-solid fa-check"></i> Attention to detail</li>
+                            <li><i class="fa-solid fa-check"></i> Client-focused work</li>
+                        </ul>
+                    </div>
+                    <div class="flex-col">
+                        <ul class="main-list">
+                            <li><i class="fa-solid fa-check"></i> On-time delivery</li>
+                            <li><i class="fa-solid fa-check"></i> Friendly communication</li>
+                            <li><i class="fa-solid fa-check"></i> Always willing to learn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAREER OBJECTIVE -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h2>Career Objective</h2>
+                </div>
+                <p>To build a successful freelancing career by providing high-quality video editing and creative digital content services to clients worldwide, while continuously improving my skills.</p>
+            </div>
+
+            <!-- DECLARATION -->
+            <div class="main-section">
+                <div class="section-header">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h2>Declaration</h2>
+                </div>
+                <p>I hereby declare that the above information is true and correct to the best of my knowledge.</p>
+                
+                <div class="signature-box">
+                    <div>Date: ______________</div>
+                    <div>Signature: <span class="sig-text">Rafi Talukder</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
